@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>京东健康</title>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-title" content="京东健康">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui">
+
+<link rel="stylesheet" href="common/main.min.css">
+<style type="text/css">
+#qrcode img {
+    border: 0;
+    vertical-align: middle;
+    margin: auto;
+}
+</style>
+</head>
+
+<body>
+<div class="row-fluid classic breadcrumbs margin-bottom-20" style="">
+    <div class="container">
+        <h1 class="pull-left" style="">京东健康</h1>
+        <ul class="pull-right breadcrumb pr-15" style="">
+                <li></li>
+                <li>请在Safari浏览器中打开</li>
+                <li></li>
+        </ul>
+    </div>
+</div>
+    <div class="container content">
+        <div class="view row">
+                <div class="span12" style="text-align:center;">
+                    <img src="logo.png"
+                         class="appicon"/>
+                </div>
+                </div>
+
+        <div id="" class="view row" style="margin-top:30px;">
+            <div class="span12 margin-bottom-20" style="text-align:center;">
+            <div class="spinner">
+                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/byteflap/distbubue.github.io/master/jdhbeta/install.plist"  id="down_load"  class="btn-u btn-u-lg" style="border-radius: 10px;border: none">
+                     点击安装 
+                </a>
+            </div>
+        </div>
+            
+            <div class="span12 ios-signature" style="text-align:center;margin-top: 15px;">
+                <span class="label label-info">适用于iOS设备</span>
+                <span class="label label-danger">企业版</span>
+            </div>
+
+        </div>
+
+        <hr class="devider devider-dotted">
+            <div id="" class="view row margin-bottom-30">
+            <div class="span12" style="text-align:center;">
+                或者用手机扫描二维码安装                    <br/>
+                <br/>
+                <div id="qrcode"/>
+            </div>
+            </div>
+    </div>
+    <script src="common/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="common/jquery.qrcode.min.js" type="text/javascript"></script>
+    <script>
+    jQuery(function () {
+            jQuery('#qrcode').qrcode({
+                render: "canvas", //设置渲染方式，有table和canvas，使用canvas方式渲染性能相对来说比较好
+                text: location.href, //扫描二维码后显示的内容,可以直接填一个网址，扫描二维码后自动跳向该链接
+                width: 156, //二维码的宽度
+                height: 156,
+                background: "#ffffff", //二维码的后景色
+                foreground: "#333333", //二维码的前景色
+                src: 'logo.png',
+                imgWidth: 30,
+                imgHeight: 30
+            });
+        });
+    </script>
+</body>
+</html>
