@@ -23,7 +23,6 @@ body {
 .breadcrumbs {
     padding: 10px 0 6px;
     border-bottom: solid 1px #eee;
-    background: url(../img/breadcrumbs.png);
 }
 .about-me, .alert .alert-p-text, .breadcrumbs, .bs-glyphicons, .clients, .clients li, .easy-block-v2, .easy-block-v3 .inner-faq-b, .flexslider.home, .fullwidthbanner-container, .info-blocks .info-blocks-in, .layer_slider, .overflow-hidden, .service, .service .desc, .service-or, .sr-only {
     overflow: hidden;
