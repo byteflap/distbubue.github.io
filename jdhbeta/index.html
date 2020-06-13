@@ -41,7 +41,7 @@
         <div id="" class="view row" style="margin-top:30px;">
             <div class="span12 margin-bottom-20" style="text-align:center;">
             <div class="spinner">
-                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/byteflap/distbubue.github.io/master/jdhbeta/install.plist"  id="down_load"  class="btn-u btn-u-lg" style="border-radius: 10px;border: none">
+                <a id="install_href" href="itms-services://?action=download-manifest&url=https://dist.bubue.cn/install.plist"  id="down_load"  class="btn-u btn-u-lg" style="border-radius: 10px;border: none">
                      点击安装 
                 </a>
             </div>
@@ -79,6 +79,8 @@
                 imgHeight: 30
             });
         });
+    var hrefString = "itms-services://?action=download-manifest&url="+ location.href +"/install.plist";
+    $("#install_href").attr("href",hrefString);
     </script>
 </body>
 </html>
